@@ -38,3 +38,8 @@ COUNT: Counts the number of cells with numbers.
 
 excel
 =COUNT(value1, [value2], ...)
+MAX/MIN: Returns the largest/smallest value in a range.
+
+excel
+=MAX(number1, [number2], ...)
+=MIN(number1, [number2], ...)
