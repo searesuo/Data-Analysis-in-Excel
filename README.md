@@ -23,5 +23,9 @@ Discover insights to drive strategic decisions
 
 Communicate findings clearly through reports and dashboards
 
+1. Basic Math & Statistical Functions
+SUM: Adds all numbers in a range.
 
+excel
+=SUM(number1, [number2], ...)
 
