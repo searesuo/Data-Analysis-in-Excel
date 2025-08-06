@@ -1,0 +1,83 @@
+# Excel Functions Cheat Sheet 📊
+
+A quick reference guide for useful Excel functions with **syntax + examples**.
+
+---
+
+## **1. Basic Math & Statistical Functions**
+| Function | Syntax | Example | Description |
+|----------|--------|---------|-------------|
+| **SUM** | `=SUM(number1, [number2], ...)` | `=SUM(A1:A5)` → Adds `A1` to `A5` | Adds all numbers in a range. |
+| **AVERAGE** | `=AVERAGE(number1, [number2], ...)` | `=AVERAGE(B2:B10)` → Avg of `B2:B10` | Calculates the average of numbers. |
+| **COUNT** | `=COUNT(value1, [value2], ...)` | `=COUNT(C1:C20)` → Counts numbers in `C1:C20` | Counts cells with numbers. |
+| **MAX** | `=MAX(number1, [number2], ...)` | `=MAX(D1:D100)` → Largest value in `D1:D100` | Returns the largest value. |
+| **MIN** | `=MIN(number1, [number2], ...)` | `=MIN(E1:E50)` → Smallest value in `E1:E50` | Returns the smallest value. |
+
+---
+
+## **2. Logical Functions**
+| Function | Syntax | Example | Description |
+|----------|--------|---------|-------------|
+| **IF** | `=IF(logical_test, [value_if_true], [value_if_false])` | `=IF(A1>50, "Pass", "Fail")` → Checks if `A1 > 50` | Conditional check. |
+| **AND** | `=AND(logical1, [logical2], ...)` | `=AND(B1>0, B1<100)` → `TRUE` if `B1` is between `0` and `100` | Returns `TRUE` if all conditions are met. |
+| **OR** | `=OR(logical1, [logical2], ...)` | `=OR(C1="Yes", C1="Y")` → `TRUE` if `C1` is "Yes" or "Y" | Returns `TRUE` if any condition is met. |
+| **IFS** | `=IFS(condition1, value1, condition2, value2, ...)` | `=IFS(A1>90, "A", A1>80, "B", A1>70, "C")` → Grades `A1` | Multiple IF conditions. |
+
+---
+
+## **3. Lookup & Reference Functions**
+| Function | Syntax | Example | Description |
+|----------|--------|---------|-------------|
+| **VLOOKUP** | `=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])` | `=VLOOKUP("Apple", A1:B10, 2, FALSE)` → Finds "Apple" in `A1:A10` and returns value from `B1:B10` | Vertical lookup. |
+| **HLOOKUP** | `=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])` | `=HLOOKUP("Q1", A1:D2, 2, FALSE)` → Finds "Q1" in `A1:D1` and returns value from `A2:D2` | Horizontal lookup. |
+| **INDEX & MATCH** | `=INDEX(array, row_num, [column_num])` + `=MATCH(lookup_value, lookup_array, [match_type])` | `=INDEX(B1:B10, MATCH("Banana", A1:A10, 0))` → Finds "Banana" in `A1:A10` and returns corresponding value from `B1:B10` | Flexible lookup combo. |
+| **XLOOKUP** | `=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])` | `=XLOOKUP("Orange", A1:A10, B1:B10, "Not Found")` → Modern replacement for VLOOKUP. |
+
+---
+
+## **4. Text Functions**
+| Function | Syntax | Example | Description |
+|----------|--------|---------|-------------|
+| **CONCATENATE** | `=CONCATENATE(text1, [text2], ...)` | `=CONCATENATE("Hello", " ", "World")` → "Hello World" | Joins text (older version). |
+| **TEXTJOIN** | `=TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)` | `=TEXTJOIN("-", TRUE, A1, B1, C1)` → Joins `A1`, `B1`, `C1` with "-" | Joins text with a delimiter. |
+| **LEFT** | `=LEFT(text, [num_chars])` | `=LEFT("Excel", 2)` → "Ex" | Extracts text from the left. |
+| **RIGHT** | `=RIGHT(text, [num_chars])` | `=RIGHT("Programming", 3)` → "ing" | Extracts text from the right. |
+| **MID** | `=MID(text, start_num, num_chars)` | `=MID("Microsoft", 3, 4)` → "cros" | Extracts text from the middle. |
+| **TRIM** | `=TRIM(text)` | `=TRIM("  Excel  ")` → "Excel" | Removes extra spaces. |
+
+---
+
+## **5. Date & Time Functions**
+| Function | Syntax | Example | Description |
+|----------|--------|---------|-------------|
+| **TODAY** | `=TODAY()` | `=TODAY()` → `2025-08-07` (current date) | Returns current date. |
+| **NOW** | `=NOW()` | `=NOW()` → `2025-08-07 14:30` (current datetime) | Returns current date & time. |
+| **DATEDIF** | `=DATEDIF(start_date, end_date, "unit")` | `=DATEDIF("2020-01-01", TODAY(), "Y")` → Years since 2020 | Calculates date difference. |
+| **DATE** | `=DATE(year, month, day)` | `=DATE(2025, 12, 25)` → `2025-12-25` | Creates a date from values. |
+
+---
+
+## **6. Financial Functions**
+| Function | Syntax | Example | Description |
+|----------|--------|---------|-------------|
+| **PMT** | `=PMT(rate, nper, pv, [fv], [type])` | `=PMT(0.05/12, 60, 10000)` → Monthly payment for a $10k loan at 5% APR over 5 years | Calculates loan payments. |
+| **FV** | `=FV(rate, nper, pmt, [pv], [type])` | `=FV(0.07/12, 120, -200)` → Future value of $200/month at 7% APR for 10 years | Future value of an investment. |
+
+---
+
+## **7. Dynamic Array Functions (Excel 365)**
+| Function | Syntax | Example | Description |
+|----------|--------|---------|-------------|
+| **FILTER** | `=FILTER(array, include, [if_empty])` | `=FILTER(A1:B10, B1:B10>50)` → Returns rows where `B1:B10 > 50` | Filters data dynamically. |
+| **UNIQUE** | `=UNIQUE(array, [by_col], [exactly_once])` | `=UNIQUE(A1:A100)` → Lists unique values in `A1:A100` | Extracts unique values. |
+| **SORT** | `=SORT(array, [sort_index], [sort_order], [by_col])` | `=SORT(A1:B10, 2, -1)` → Sorts `A1:B10` by column 2 in descending order | Sorts a range. |
+
+---
+
+### **📌 Notes**
+- Some functions (like `XLOOKUP`, `TEXTJOIN`, `UNIQUE`) require **Excel 365** or **Excel 2019+**.
+- For older Excel versions, use `VLOOKUP` or `INDEX+MATCH` instead of `XLOOKUP`.
+
+---
+
+Would you like any modifications or additional examples? 😊
