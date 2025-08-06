@@ -29,3 +29,7 @@ SUM: Adds all numbers in a range.
 excel
 =SUM(number1, [number2], ...)
 
+AVERAGE: Calculates the average of numbers.
+
+excel
+=AVERAGE(number1, [number2], ...)
