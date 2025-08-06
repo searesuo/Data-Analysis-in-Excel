@@ -1,0 +1,73 @@
+# Excel Functions Cheat Sheet 📊
+
+A quick reference guide for useful Excel functions with syntax and examples.
+
+---
+
+## **1. Basic Math & Statistical Functions**
+| Function | Syntax | Description |
+|----------|--------|-------------|
+| **SUM** | `=SUM(number1, [number2], ...)` | Adds all numbers in a range. |
+| **AVERAGE** | `=AVERAGE(number1, [number2], ...)` | Calculates the average of numbers. |
+| **COUNT** | `=COUNT(value1, [value2], ...)` | Counts cells with numbers. |
+| **MAX** | `=MAX(number1, [number2], ...)` | Returns the largest value. |
+| **MIN** | `=MIN(number1, [number2], ...)` | Returns the smallest value. |
+
+---
+
+## **2. Logical Functions**
+| Function | Syntax | Description |
+|----------|--------|-------------|
+| **IF** | `=IF(logical_test, [value_if_true], [value_if_false])` | Conditional check. |
+| **AND** | `=AND(logical1, [logical2], ...)` | Returns `TRUE` if all conditions are met. |
+| **OR** | `=OR(logical1, [logical2], ...)` | Returns `TRUE` if any condition is met. |
+| **IFS** | `=IFS(condition1, value1, condition2, value2, ...)` | Multiple IF conditions. |
+
+---
+
+## **3. Lookup & Reference Functions**
+| Function | Syntax | Description |
+|----------|--------|-------------|
+| **VLOOKUP** | `=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])` | Vertical lookup. |
+| **HLOOKUP** | `=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])` | Horizontal lookup. |
+| **INDEX & MATCH** | `=INDEX(array, row_num, [column_num])` + `=MATCH(lookup_value, lookup_array, [match_type])` | Flexible lookup combo. |
+| **XLOOKUP** | `=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])` | Modern replacement for VLOOKUP. |
+
+---
+
+## **4. Text Functions**
+| Function | Syntax | Description |
+|----------|--------|-------------|
+| **CONCATENATE** | `=CONCATENATE(text1, [text2], ...)` | Joins text (older version). |
+| **TEXTJOIN** | `=TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)` | Joins text with a delimiter. |
+| **LEFT** | `=LEFT(text, [num_chars])` | Extracts text from the left. |
+| **RIGHT** | `=RIGHT(text, [num_chars])` | Extracts text from the right. |
+| **MID** | `=MID(text, start_num, num_chars)` | Extracts text from the middle. |
+| **TRIM** | `=TRIM(text)` | Removes extra spaces. |
+
+---
+
+## **5. Date & Time Functions**
+| Function | Syntax | Description |
+|----------|--------|-------------|
+| **TODAY** | `=TODAY()` | Returns current date. |
+| **NOW** | `=NOW()` | Returns current date & time. |
+| **DATEDIF** | `=DATEDIF(start_date, end_date, "unit")` | Calculates date difference. |
+| **DATE** | `=DATE(year, month, day)` | Creates a date from values. |
+
+---
+
+## **6. Financial Functions**
+| Function | Syntax | Description |
+|----------|--------|-------------|
+| **PMT** | `=PMT(rate, nper, pv, [fv], [type])` | Calculates loan payments. |
+| **FV** | `=FV(rate, nper, pmt, [pv], [type])` | Future value of an investment. |
+
+---
+
+## **7. Dynamic Array Functions (Excel 365)**
+| Function | Syntax | Description |
+|----------|--------|-------------|
+| **FILTER** | `=FILTER(array, include, [if_empty])` | Filters data dynamically. |
+| **UNIQUE** | `=UNIQUE(array, [by_col], [exactly_once])` | Extracts unique values. |
+| **SORT** | `=SORT(array, [sort_index], [sort_order], [by_col])` | Sorts a range. |
