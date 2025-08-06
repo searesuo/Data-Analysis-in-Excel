@@ -33,3 +33,8 @@ AVERAGE: Calculates the average of numbers.
 
 excel
 =AVERAGE(number1, [number2], ...)
+
+COUNT: Counts the number of cells with numbers.
+
+excel
+=COUNT(value1, [value2], ...)
